@@ -2,9 +2,19 @@ package pieces;
 
 public abstract class AbstractPiece implements Piece{
 	private Player player;
+	private PieceType type;
 	
-	public AbstractPiece(Player player){
+	public AbstractPiece(PieceType type, Player player){
+		this.type = type;
 		this.player = player;
+	}
+
+	public PieceType getType() {
+		return type;
+	}
+
+	public void setType(PieceType type) {
+		this.type = type;
 	}
 
 	public Player getPlayer() {
