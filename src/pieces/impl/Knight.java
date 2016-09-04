@@ -16,8 +16,28 @@ public class Knight extends AbstractPiece{
 
 	@Override
 	public ArrayList<Position> getValidMoves(Position origin) {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<Position> moves = new ArrayList<Position>();
+		
+		origin.x--;
+		if(!origin.isOutOfBounds())
+			moves.add(origin);
+		
+		origin.x++;
+		origin.y--;
+		if(!origin.isOutOfBounds())
+			moves.add(origin);
+		
+		origin.x++;
+		origin.y++;
+		if(!origin.isOutOfBounds())
+			moves.add(origin);
+		
+		origin.x--;
+		origin.y++;
+		if(!origin.isOutOfBounds())
+			moves.add(origin);
+		
+		return moves;
 	}
 
 }
