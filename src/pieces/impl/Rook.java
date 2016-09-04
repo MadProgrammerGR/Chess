@@ -9,7 +9,7 @@ import util.Position;
 
 public class Rook extends AbstractPiece{
 
-	public Rook(PieceType type, Player player) {
+	public Rook(Player player) {
 		super(PieceType.ROOK, player);
 		// TODO Auto-generated constructor stub
 	}
