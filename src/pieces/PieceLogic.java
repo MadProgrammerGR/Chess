@@ -4,8 +4,7 @@ import java.util.List;
 
 import util.Position;
 
-public interface Piece {
+public interface PieceLogic {
 	boolean isMoveValid(Position oldPosition, Position newPosition);
 	List<Position> getValidMoces();
-
 }
