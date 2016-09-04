@@ -35,8 +35,8 @@ public class ChessBoard {
 	}
 
 	public void makeMove(final Position from, final Position to) {
-		if (to.x >= 8 || to.x < 0 || to.y >= 8 || to.y < 0)
-			throw new ArrayIndexOutOfBoundsException("Invalid x,y: " + to.x + "," + to.y);
+		if (to.isOutOfBounds())
+			throw new ArrayIndexOutOfBoundsException("Invalid x,y: " + to.toString());
 
 		AbstractPiece target = getPiece(to);
 		if(target != null){

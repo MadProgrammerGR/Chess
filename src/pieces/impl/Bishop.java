@@ -1,6 +1,6 @@
 package pieces.impl;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import pieces.AbstractPiece;
 import pieces.PieceType;
@@ -15,13 +15,7 @@ public class Bishop extends AbstractPiece{
 	}
 
 	@Override
-	public boolean isMoveValid(Position oldPosition, Position newPosition) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public List<Position> getValidMoces() {
+	public ArrayList<Position> getValidMoves(Position origin) {
 		// TODO Auto-generated method stub
 		return null;
 	}

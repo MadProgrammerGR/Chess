@@ -1,12 +1,24 @@
 package pieces;
 
-public abstract class AbstractPiece implements Piece{
-	private Player player;
-	private PieceType type;
-	
-	public AbstractPiece(PieceType type, Player player){
+import java.util.ArrayList;
+
+import util.Position;
+
+public abstract class AbstractPiece implements Piece {
+	protected Player player;
+	protected PieceType type;
+
+	public AbstractPiece(PieceType type, Player player) {
 		this.type = type;
 		this.player = player;
+	}
+	
+	public boolean isMoveValid(Position oldPosition, Position newPosition) {
+		ArrayList<Position> validMoves = getValidMoves(oldPosition);
+		for (Position current : validMoves)
+			if (current.equals(newPosition))
+				return true;
+		return false;
 	}
 
 	public PieceType getType() {

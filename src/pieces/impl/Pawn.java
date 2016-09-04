@@ -1,29 +1,38 @@
 package pieces.impl;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import pieces.AbstractPiece;
 import pieces.PieceType;
 import pieces.Player;
 import util.Position;
 
-public class Pawn extends AbstractPiece{
+public class Pawn extends AbstractPiece {
 
 	public Pawn(Player player) {
 		super(PieceType.PAWN, player);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public boolean isMoveValid(Position oldPosition, Position newPosition) {
-		// TODO Auto-generated constructor stub
-		return false;
-	}
+	public ArrayList<Position> getValidMoves(final Position origin) {
+		ArrayList<Position> moves = new ArrayList<Position>();
 
-	@Override
-	public List<Position> getValidMoces() {
-		// TODO Auto-generated constructor stub
-		return null;
+		Position current = origin;
+		if (player == Player.PLAYER_ONE) {
+			current.y--;
+			while (!current.isOutOfBounds()) {
+				moves.add(current);
+				current.y--;
+			}
+		} else {
+			current.y++;
+			while (!current.isOutOfBounds()) {
+				moves.add(current);
+				current.y++;
+			}
+		}
+
+		return moves;
 	}
 
 }

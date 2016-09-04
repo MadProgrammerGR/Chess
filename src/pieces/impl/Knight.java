@@ -1,6 +1,6 @@
 package pieces.impl;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import pieces.AbstractPiece;
 import pieces.PieceType;
@@ -15,15 +15,11 @@ public class Knight extends AbstractPiece{
 	}
 
 	@Override
-	public boolean isMoveValid(Position oldPosition, Position newPosition) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	public ArrayList<Position> getValidMoves(Position origin) {
+		ArrayList<Position> moves = new ArrayList<Position>();
 
-	@Override
-	public List<Position> getValidMoces() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return moves;
 	}
 
 }
