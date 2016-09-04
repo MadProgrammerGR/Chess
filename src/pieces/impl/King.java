@@ -9,7 +9,7 @@ import util.Position;
 
 public class King extends AbstractPiece{
 
-	public King(PieceType type, Player player) {
+	public King(Player player) {
 		super(PieceType.KING, player);
 		// TODO Auto-generated constructor stub
 	}

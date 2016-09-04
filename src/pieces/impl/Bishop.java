@@ -9,7 +9,7 @@ import util.Position;
 
 public class Bishop extends AbstractPiece{
 
-	public Bishop(PieceType type, Player player) {
+	public Bishop(Player player) {
 		super(PieceType.BISHOP, player);
 		// TODO Auto-generated constructor stub
 	}
