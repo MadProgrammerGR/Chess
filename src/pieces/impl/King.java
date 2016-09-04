@@ -1,6 +1,7 @@
 package pieces.impl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import pieces.AbstractPiece;
 import pieces.PieceType;

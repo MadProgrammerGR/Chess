@@ -16,10 +16,8 @@ public class Knight extends AbstractPiece{
 
 	@Override
 	public ArrayList<Position> getValidMoves(Position origin) {
-		ArrayList<Position> moves = new ArrayList<Position>();
-
-
-		return moves;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

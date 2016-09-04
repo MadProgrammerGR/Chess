@@ -17,19 +17,14 @@ public class Pawn extends AbstractPiece {
 	public ArrayList<Position> getValidMoves(final Position origin) {
 		ArrayList<Position> moves = new ArrayList<Position>();
 
-		Position current = origin;
 		if (player == Player.PLAYER_ONE) {
-			current.y--;
-			while (!current.isOutOfBounds()) {
-				moves.add(current);
-				current.y--;
-			}
+			Position pos = new Position(origin.x, origin.y - 1);
+			if(!pos.isOutOfBounds())
+				moves.add(pos);
 		} else {
-			current.y++;
-			while (!current.isOutOfBounds()) {
-				moves.add(current);
-				current.y++;
-			}
+			Position pos = new Position(origin.x, origin.y + 1);
+			if(!pos.isOutOfBounds())
+				moves.add(pos);
 		}
 
 		return moves;
