@@ -9,10 +9,6 @@ public class Position {
 		this.y = y;
 	}
 
-	public boolean isOutOfBounds() {
-		return (x >= 8 || x < 0 || y >= 8 || y < 0);
-	}
-
 	public boolean equals(Position other) {
 		return x == other.x && y == other.y;
 	}

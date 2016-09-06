@@ -2,6 +2,7 @@ package pieces.impl;
 
 import java.util.ArrayList;
 
+import core.ChessBoard;
 import pieces.AbstractPiece;
 import pieces.PieceType;
 import pieces.Player;
@@ -19,11 +20,11 @@ public class Pawn extends AbstractPiece {
 
 		if (player == Player.PLAYER_ONE) {
 			Position pos = new Position(origin.x, origin.y - 1);
-			if(!pos.isOutOfBounds())
+			if(!ChessBoard.isOutOfBounds(pos))
 				moves.add(pos);
 		} else {
 			Position pos = new Position(origin.x, origin.y + 1);
-			if(!pos.isOutOfBounds())
+			if(!ChessBoard.isOutOfBounds(pos))
 				moves.add(pos);
 		}
 
