@@ -1,10 +1,13 @@
 package pieces;
 
-import java.util.ArrayList;
+public class Piece {
 
-import util.Position;
+	public PieceType type;
+	public Player player;
 
-public interface Piece {
-	boolean isMoveValid(Position oldPosition, Position newPosition);
-	ArrayList<Position> getValidMoves(Position origin);
+	public Piece(Player player, PieceType type) {
+		this.type = type;
+		this.player = player;
+	}
+
 }
